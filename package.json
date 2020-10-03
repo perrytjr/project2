@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/msurio/project2/issues"
   },
-  "homepage": "https://github.com/msurio/project2#readme"
+  "homepage": "https://github.com/msurio/project2#readme",
+  "devDependencies": {
+    "eslint": "^7.10.0"
+  }
 }
