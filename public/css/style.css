@@ -1,14 +1,5 @@
 body {
-    background: navy;
-    color: white;
-}
-
-#container {
-    position: fixed;
-    margin-left: 35%;
-    margin-top: 10%;
-}
-	display: flex;
+    display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
@@ -21,6 +12,12 @@ body {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 	-webkit-font-smoothing: antialiased;
   }
+
+#container {
+    position: fixed;
+    margin-left: 35%;
+    margin-top: 10%;
+}
   
   #frame {
 	width: 95%;
