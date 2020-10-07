@@ -22,5 +22,8 @@
     "mysql": "^2.18.1",
     "sequelize": "^6.3.5",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0"
   }
 }
