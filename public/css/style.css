@@ -1,0 +1,10 @@
+body {
+    background: navy;
+    color: white;
+}
+
+#container {
+    position: fixed;
+    margin-left: 35%;
+    margin-top: 10%;
+}
