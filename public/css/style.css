@@ -14,9 +14,8 @@ body {
   }
 
 #container {
-    position: fixed;
-    margin-left: 35%;
-    margin-top: 10%;
+    position:relative;
+    width:100%;
 }
   
   #frame {
