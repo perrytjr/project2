@@ -14,10 +14,26 @@ body {
   }
 
 #container {
-    position: fixed;
-    margin-left: 35%;
-    margin-top: 10%;
+    position:relative;
+	width:100%;
+	text-align:justify;
+	background-color:white;
+	border:1px solid white;
+	padding:25px;
+	border-radius:10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+#container h1{
+	text-align:center;
+	text-shadow: 2px 1px 3px rgba(150, 150, 150, 1);}
+
+#container p{
+	text-align:center;
+}
+
+
+
   
   #frame {
 	width: 95%;
