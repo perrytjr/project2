@@ -20,17 +20,19 @@
                 <p><small>Please fill out to create your user profile</small></p>
                 <hr>
                 <label for="fullname"><b>Full Name</b></label>
-                <input type="text" class="form-control" placeholder="Enter full name" name="name" required>
+                <input id="fullname" type="text" class="form-control" placeholder="Enter full name" name="name"
+                    required>
                 <br>
                 <label for="username"><b>Username</b></label>
-                <input type="text" class="form-control" placeholder="Enter your username" name="username" required>
+                <input id="username" type="text" class="form-control" placeholder="Enter your username" name="username"
+                    required>
                 <br>
                 <label for="bio"><b>Bio</b></label>
                 <textarea id="bio" class="form-control" name="bio" rows="4" cols="50" type="text"
                     placeholder="Tell us a little about yourself" name="bio" required></textarea>
                 <hr>
                 <div class="clearfix">
-                    <button onclick="window.location.href='chat.html'" type="button" class="btn btn-primary btn-large btn-block">Join the Chat</button>
+                    <button type="submit" class="btn btn-primary btn-large btn-block">Join the Chat</button>
                 </div>
             </div>
         </form>
