@@ -13,7 +13,7 @@ body {
 	-webkit-font-smoothing: antialiased;
   }
 
-#container {
+.container {
     position:relative;
 	width:100%;
 	text-align:justify;
@@ -24,11 +24,11 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#container h1{
+.container h1{
 	text-align:center;
 	text-shadow: 2px 1px 3px rgba(150, 150, 150, 1);}
 
-#container p{
+.container p{
 	text-align:center;
 }
 
