@@ -8,7 +8,7 @@ CREATE DATABASE chat_roomDB;
 USE chat_roomDB;
 --will we prompt the user for hobbies/short story? how will we do so. How will we connect the user info to mysql?
 CREATE TABLE users (
-  id INT NOT NULL AUTO_INCREMENT,
+  id INT NOT NULL,
   fullname VARCHAR(45) NULL,
   username VARCHAR(45) NULL,
   PRIMARY KEY (id)
