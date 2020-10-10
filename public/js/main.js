@@ -1,35 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
-=======
->>>>>>> 8eb0fa8004c834fb83266e28976aae946202e4be
+
 // $(document).ready(function(){
 //   // Write index page your CLIENT-SIDE logic here
 //   // This will run in the browser
 // });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-//vanilla JS grabbing elements:
->>>>>>> a31584402e80e4b42df6c5a80a8dc8bb955eec18
->>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
-=======
->>>>>>> 8eb0fa8004c834fb83266e28976aae946202e4be
+
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const userList = document.getElementById('users');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
-=======
->>>>>>> 8eb0fa8004c834fb83266e28976aae946202e4be
+
 // Get username and room from URL
 const { username, room } = Qs.parse(location.search, {
 ignoreQueryPrefix: true
@@ -39,18 +19,12 @@ const socket = io();
 
 // Join chatroom
 socket.emit('joinRoom', { username });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+
 const socket = io();
 
 // Join chatroom
 socket.emit('joinRoom', {username});
->>>>>>> a31584402e80e4b42df6c5a80a8dc8bb955eec18
->>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
-=======
->>>>>>> 8eb0fa8004c834fb83266e28976aae946202e4be
+
 
 // Get room and users
 socket.on('roomUsers', ({ users }) => {
@@ -68,13 +42,7 @@ chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 // Message submit
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
-=======
->>>>>>> 8eb0fa8004c834fb83266e28976aae946202e4be
+
 chatForm.addEventListener('submit', e => {
 e.preventDefault();
 
@@ -93,10 +61,7 @@ socket.emit('chatMessage', msg);
 // Clear input
 e.target.elements.msg.value = '';
 e.target.elements.msg.focus();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+
 msgInput.addEventListener('submit', e => {
   //prevent the page from reloading
   e.preventDefault();
@@ -116,10 +81,7 @@ msgInput.addEventListener('submit', e => {
   // Clear input
   e.target.elements.msg.value = '';
   e.target.elements.msg.focus();
->>>>>>> a31584402e80e4b42df6c5a80a8dc8bb955eec18
->>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
-=======
->>>>>>> 8eb0fa8004c834fb83266e28976aae946202e4be
+
 });
 
 // Output message to DOM
