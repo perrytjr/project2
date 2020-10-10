@@ -1,12 +1,26 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
 // $(document).ready(function(){
 //   // Write index page your CLIENT-SIDE logic here
 //   // This will run in the browser
 // });
 
+<<<<<<< HEAD
+=======
+=======
+//vanilla JS grabbing elements:
+>>>>>>> a31584402e80e4b42df6c5a80a8dc8bb955eec18
+>>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
 const userList = document.getElementById('users');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
 // Get username and room from URL
 const { username, room } = Qs.parse(location.search, {
 ignoreQueryPrefix: true
@@ -16,6 +30,15 @@ const socket = io();
 
 // Join chatroom
 socket.emit('joinRoom', { username });
+<<<<<<< HEAD
+=======
+=======
+const socket = io();
+
+// Join chatroom
+socket.emit('joinRoom', {username});
+>>>>>>> a31584402e80e4b42df6c5a80a8dc8bb955eec18
+>>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
 
 // Get room and users
 socket.on('roomUsers', ({ users }) => {
@@ -33,6 +56,10 @@ chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 // Message submit
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
 chatForm.addEventListener('submit', e => {
 e.preventDefault();
 
@@ -51,6 +78,30 @@ socket.emit('chatMessage', msg);
 // Clear input
 e.target.elements.msg.value = '';
 e.target.elements.msg.focus();
+<<<<<<< HEAD
+=======
+=======
+msgInput.addEventListener('submit', e => {
+  //prevent the page from reloading
+  e.preventDefault();
+
+  // Get message 
+  let msg = e.target.elements.msg.value;
+  
+  msg = msg.trim();
+  
+  if (!msg){
+    return false;
+  }
+
+  // Emit message to server
+  socket.emit('chatMessage', msg);
+
+  // Clear input
+  e.target.elements.msg.value = '';
+  e.target.elements.msg.focus();
+>>>>>>> a31584402e80e4b42df6c5a80a8dc8bb955eec18
+>>>>>>> 98722c96602daa23ee7fde132c30b918934f3203
 });
 
 // Output message to DOM
