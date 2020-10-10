@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>Login</title>
 </head>
+
 <body>
     <main>
-        <form action="action_page.php">
-            <div id="container">
-                <h1>Sign in, to chat</h1>
-                <p>Please fill out to create your user profile</p>
+        <form action="chat.html">
+            <div class="container container-fluid form-group">
+                <h1><strong>Sign In To Chat!</strong></h1>
+                <p><small>Please fill out to create your user profile</small></p>
                 <hr>
                 <label for="fullname"><b>Full Name</b></label>
-                <input type="text" placeholder="Enter full name" name="name" required>
+                <input id="fullname" type="text" class="form-control" placeholder="Enter full name" name="name"
+                    required>
                 <br>
                 <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter your username" name="username" required>
+                <input id="username" type="text" class="form-control" placeholder="Enter your username" name="username"
+                    required>
                 <br>
                 <label for="bio"><b>Bio</b></label>
-                <textarea id="bio" name="bio" rows="4" cols="50" type="text" placeholder="Tell us a little about yourself" name="bio" required></textarea>
+                <textarea id="bio" class="form-control" name="bio" rows="4" cols="50" type="text"
+                    placeholder="Tell us a little about yourself" name="bio" required></textarea>
                 <hr>
                 <div class="clearfix">
-                    <button type="button" class="signupbtn">Join the Chat</button>
+                    <button type="submit" class="btn btn-primary btn-large btn-block">Join the Chat</button>
                 </div>
             </div>
         </form>
     </main>
 </body>
+
 </html>

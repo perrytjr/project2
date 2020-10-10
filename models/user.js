@@ -4,8 +4,12 @@ var Sequelize = require("sequelize");
 // sequelize (lowercase) references our connection to the DB.
 var sequelize = require("../config/connection.js");
 
-var User = sequelize.define("character", {
-  id: Sequelize.INTEGER,
+var Users = sequelize.create("users", {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true 
+      },
   fullname: Sequelize.STRING,
   username: Sequelize.STRING,
   bio: Sequelize.STRING,
@@ -13,6 +17,6 @@ var User = sequelize.define("character", {
 });
 
 // Syncs with DB
-Character.sync()
+Users.sync()
 
-module.exports = User;
+module.exports = Users;

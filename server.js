@@ -1,5 +1,4 @@
 // *** Dependencies
-// =============================================================
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -24,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const botName = 'ChatCord Bot';
 
 // Requiring our models for syncing
-const db = require("./models");
+// const db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -34,28 +33,27 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-// =============================================================
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
-});
+// db.sequelize.sync({ force: true }).then(function() {
+//   app.listen(PORT, function() {
+//     console.log("App listening on PORT " + PORT);
+//   });
+// });
 
 
 // Run when client connects
 io.on('connection', socket => {
-  socket.on('joinRoom', ({ username, room }) => {
-    const user = userJoin(socket.id, username, room);
+  socket.on('joinRoom', ({username}) => {
+    const user = userJoin(socket.id, username);
 
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
+    socket.emit('message', formatMessage(botName, 'Welcome to the Chat!'));
 
     // Broadcast when a user connects
     socket.broadcast
