@@ -20,7 +20,7 @@ var PORT = process.env.PORT || 8080;
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const botName = 'ChatCord Bot';
+const admin = 'Jeeves (admin)';
 
 // Requiring our models for syncing
 // const db = require("./models");
@@ -53,14 +53,14 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to the Chat!'));
+    socket.emit('message', formatMessage(admin, 'Welcome to the Chat!'));
 
     // Broadcast when a user connects
     socket.broadcast
       .to(user.room)
       .emit(
         'message',
-        formatMessage(botName, `${user.username} has joined the chat`)
+        formatMessage(admin, `${user.username} has joined the chat`)
       );
 
     // Send users and room info
@@ -84,7 +84,7 @@ io.on('connection', socket => {
     if (user) {
       io.to(user.room).emit(
         'message',
-        formatMessage(botName, `${user.username} has left the chat`)
+        formatMessage(admin, `${user.username} has left the chat`)
       );
 
       // Send users and room info
