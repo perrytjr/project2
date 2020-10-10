@@ -1,5 +1,4 @@
 // *** Dependencies
-// =============================================================
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -34,7 +33,6 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-// =============================================================
 // require("./routes/api-routes.js")(app);
 // require("./routes/html-routes.js")(app);
 
@@ -49,13 +47,13 @@ app.use(express.static("public"));
 
 // Run when client connects
 io.on('connection', socket => {
-  socket.on('joinRoom', ({ username, room }) => {
-    const user = userJoin(socket.id, username, room);
+  socket.on('joinRoom', ({username}) => {
+    const user = userJoin(socket.id, username);
 
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
+    socket.emit('message', formatMessage(botName, 'Welcome to the Chat!'));
 
     // Broadcast when a user connects
     socket.broadcast
