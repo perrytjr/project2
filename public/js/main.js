@@ -5,7 +5,6 @@
 
 const chatForm = document.getElementById('chat-form');
 const chatMessages = document.querySelector('.chat-messages');
-const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 // Get username and room from URL
@@ -16,11 +15,11 @@ ignoreQueryPrefix: true
 const socket = io();
 
 // Join chatroom
-socket.emit('joinRoom', { username, room });
+socket.emit('joinRoom', { username });
 
 // Get room and users
-socket.on('roomUsers', ({ room, users }) => {
-outputRoomName(room);
+socket.on('roomUsers', ({ users }) => {
+// outputRoomName(room);
 outputUsers(users);
 });
 
@@ -34,7 +33,7 @@ chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
 // Message submit
-msgInput.addEventListener('submit', e => {
+chatForm.addEventListener('submit', e => {
 e.preventDefault();
 
 // Get message text
@@ -71,9 +70,9 @@ document.querySelector('.chat-messages').appendChild(div);
 }
 
 // Add room name to DOM
-function outputRoomName(room) {
-roomName.innerText = room;
-}
+// function outputRoomName(room) {
+// roomName.innerText = room;
+// }
 
 // Add users to DOM
 function outputUsers(users) {
@@ -84,3 +83,4 @@ users.forEach(user=>{
   userList.appendChild(li);
 });
 }
+// create a condition if the same username has been used more than once
