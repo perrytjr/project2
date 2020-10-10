@@ -83,4 +83,5 @@ users.forEach(user=>{
   userList.appendChild(li);
 });
 }
+
 // create a condition if the same username has been used more than once
