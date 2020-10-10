@@ -1,25 +1,25 @@
 {
     "development": {
-      "username": "root",
-      "password": "root",
-      "database": "chat_roomDB",
-      "host": "127.0.0.1",
+      "username": "i1rhchdwjhyy7aru",
+      "password": "f4vi0od9pbctgkqh",
+      "database": "mgobly40bi7c5oah",
+      "host": "qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql"
     },
     "test": {
-      "username": "root",
-      "password": "root",
-      "database": "chatroom_test",
-      "host": "127.0.0.1",
+      "username": "i1rhchdwjhyy7aru",
+      "password": "f4vi0od9pbctgkqh",
+      "database": "mgobly40bi7c5oah",
+      "host": "qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql"
     },
     "production": {
-      "username": "root",
-      "password": "root",
-      "database": "chatroom_production",
-      "host": "127.0.0.1",
+      "username": "i1rhchdwjhyy7aru",
+      "password": "f4vi0od9pbctgkqh",
+      "database": "mgobly40bi7c5oah",
+      "host": "qn0cquuabmqczee2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql"
     }
