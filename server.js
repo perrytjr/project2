@@ -1,4 +1,5 @@
 // *** Dependencies
+const db = require('./models')
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -12,7 +13,7 @@ const {
 } = require('./utils/users');
 
 const app = express();
-const server = http.createServer(app);
+const server = http.Server(app);
 const io = socketio(server);
 
 var PORT = process.env.PORT || 8080;
@@ -22,8 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const admin = 'Jeeves (admin)';
 
-// Requiring our models for syncing
-// const db = require("./models");
+
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -33,20 +33,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-// require("./routes/api-routes.js")(app);
-// require("./routes/html-routes.js")(app);
-
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-// db.sequelize.sync({ force: true }).then(function() {
-//   app.listen(PORT, function() {
-//     console.log("App listening on PORT " + PORT);
-//   });
-// });
+require("./controllers/api-routes.js")(app);
+ require("./controllers/view-routes.js")(app);
 
 
 // Run when client connects
 io.on('connection', socket => {
+  console.log("hit");
   socket.on('joinRoom', ({username}) => {
     const user = userJoin(socket.id, username);
 
@@ -94,8 +87,15 @@ io.on('connection', socket => {
       });
     }
   });
+
 });
 
+// Syncing our sequelize models and then starting our Express app
+// =============================================================
 
+db.sequelize.sync({ force: true }).then(function() {
+  server.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+ });
 
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
