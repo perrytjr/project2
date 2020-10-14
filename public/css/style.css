@@ -75,14 +75,16 @@ a {
 /* Chat Page */
 
 .chat-container {
-	max-width: 1100px;
-	background: #fff;
-	margin: 30px auto;
+	width: 80%;
 	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	font-family: 'Titillium Web', sans-serif;
+
 }
 
 .chat-header {
 	background: var(--dark-color-a);
+	font-weight:bolder;
 	color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -92,6 +94,7 @@ a {
 	justify-content: space-between;
 }
 
+
 /* Styling the Switch button */
 .switch {
 	position: relative;
@@ -100,7 +103,7 @@ a {
 	height: 34px;
   }
 /* The slider */
-/* .slider {
+ .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -122,9 +125,9 @@ a {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
-} */
+} 
 
-/* input:checked + .slider {
+input:checked + .slider {
   background-color: rgb(29, 128, 210);
 }
 
@@ -136,7 +139,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-} */
+} 
 
 /* Rounded sliders */
 .slider.round {
@@ -184,6 +187,7 @@ input:checked + .slider:before {
 
 .chat-messages {
 	padding: 30px;
+	background-color:white;
 	max-height: 500px;
 	overflow-y: scroll;
 }
