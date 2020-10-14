@@ -7,6 +7,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var db = require("../models")
 
 
 // Routes
@@ -23,7 +24,14 @@ module.exports = function(app) {
   // add route loads the chat.html page,
   // where users can enter new posts to the db
   app.get("/chat", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/chat.html"));
+    db.Users.findAll({}).then(function(dbUsers) {
+      console.log(dbUsers)
+      res.render("chat",{users: dbUsers})
+    });
+    
+    //res.sendFile(path.join(__dirname, "../public/chat.html"));
   });
+
+
 
 };
