@@ -27,8 +27,7 @@ const bioInput = $("#bio");
     bioInput.val("");
   });
 
-  // Does a post to the signup route. If successful, we are redirected to the members page
-  // Otherwise we log any errors
+
   function joinTheChat(fullname, username, bio) {
     $.post("/api/signins", {
       fullname: fullname,

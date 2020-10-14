@@ -1,5 +1,6 @@
 // *** Dependencies
 const db = require('./models')
+const exphbs = require("express-handlebars");
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -31,6 +32,9 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Routes
 require("./controllers/api-routes.js")(app);
@@ -87,6 +91,7 @@ io.on('connection', socket => {
       });
     }
   });
+
 
 });
 

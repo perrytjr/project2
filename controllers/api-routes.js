@@ -21,4 +21,13 @@ module.exports = function(app) {
     res.json(dbUsers);
  });
 });
+
+
+
+ // GET route for getting all of the users
+ app.get("/api/users", function(req, res) {
+  db.Users.findAll({}).then(function(dbUsers) {
+    res.json(dbUsers);
+  });
+});
 }
