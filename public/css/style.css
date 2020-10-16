@@ -217,7 +217,7 @@ input:checked + .slider:before {
 .chat-messages .message {
   padding: 10px;
   margin-bottom: 15px;
-  background-color: var(--light-color);
+  background-color: #c4c4c4;
   border-radius: 5px;
   overflow-wrap: break-word;
 }
