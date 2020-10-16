@@ -22,7 +22,7 @@ var PORT = process.env.PORT || 8080;
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-const botName = 'ChatCord Bot';
+const botName = 'Charlie';
 
 
 
